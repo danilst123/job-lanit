@@ -1,0 +1,49 @@
+.tabs-nav
+  display: flex
+  height: 45px
+  border-radius: 23px
+  overflow: hidden
+  background-color: #f7f7f7
+  border: 1px solid #d8d8d8
+
+  &--modal
+    margin-top: 22px
+
+  & &__link
+    display: flex
+    align-items: center
+    justify-content: center
+    text-align: center
+    height: 100%
+    width: 100%
+    color: #6c6c6c
+    font-family: $main_font
+    font-size: 16px
+    font-weight: 500
+    line-height: 1
+    text-transform: uppercase
+    transition: all 0.3s
+    text-decoration: none
+
+    @media screen and (max-width: 459px)
+      font-size: 14px
+
+    @media screen and (max-width: 400px)
+      font-size: 12px
+      font-weight: 700
+
+    @media screen and (max-width: 360px)
+      font-size: 10px
+      font-weight: 700
+
+    &--active
+      background-color: #ff7415
+      color: #ffffff
+      font-weight: 500
+
+      @media screen and (max-width: 400px)
+        font-weight: 700
+
+      @media screen and (max-width: 360px)
+        font-weight: 700
+

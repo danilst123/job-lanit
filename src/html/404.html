@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit:contain">
+
+  <title>Страница не найдена</title>
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/css/select2.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/air-datepicker/2.2.3/css/datepicker.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simplebar/4.2.3/simplebar.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../css/core.css">
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/landing.css">
+</head>
+<body>
+
+  <form action="">
+    <div class="wrapper">
+    
+      <!-- ШАПКА -->
+      <header class="header">
+        <div class="container">
+          <div class="logo">
+            <a href="" class="logo__link">
+              <img class="logo__img" src="../img/lanit_logo.svg" alt="">
+              <p class="logo__text"><small>.</small>Карьера</p>
+            </a>
+            <p class="logo__descr">
+              Присоединяйтесь к компании <a href="#">ГК Ланит</a>
+            </p>
+          </div>
+          <div class="hamburger">
+            <div class="hamburger__item"></div>
+            <div class="hamburger__item"></div>
+            <div class="hamburger__item"></div>
+          </div>
+          <div class="header__togglable">
+            <nav class="nav landingMenu">
+              <a href="#about" class="nav__item">О нас</a>
+              <a href="#jobs" class="nav__item">Вакансии</a>
+              <a href="#advantages" class="nav__item">Для наших сотрудников</a>
+              <a href="#secrets" class="nav__item">Секреты успеха</a>
+              <a href="#internships" class="nav__item">Стажировки</a>
+            </nav>
+            <div class="header__contacts">
+              <div class="social-links">
+                <a href="" class="social-links__item"><img src="../img/facebook.svg" alt=""></a>
+                <a href="" class="social-links__item"><img src="../img/vk.svg" alt=""></a>
+                <a href="" class="social-links__item"><img src="../img/instagram.svg" alt=""></a>
+                <a href="" class="social-links__item"><img src="../img/telegram.svg" alt=""></a>
+                <a href="" class="social-links__item"><img src="../img/habr.svg" alt=""></a>
+                <a href="" class="social-links__item"><img src="../img/youtube.svg" alt=""></a>
+              </div>
+              <div class="header__call">
+                Связаться с нами <a href="tel:+7 (495) 967-66-50">+7 (495) 967-66-50</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="header__settings"></div>
+      </header>
+      
+      <!-- КОНТЕНТ -->
+      <main class="page">        
+        <div>
+          <div>
+            <div>
+              <section class="p404">
+                <div class="p404__box">
+                  <div class="p404__pic"></div>
+                  <div class="p404__text">
+                    <h2>Страница не найдена</h2>
+                    <p>Но вы можете ознакомиться с перечнем <a href="">актуальных вакансий</a> <br> и подобрать интересные вам варианты.</p>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <!-- ПОДВАЛ -->
+    <footer class="footer">
+      <div class="container">
+        <div class="logo">
+          <a href="" class="logo__link">
+            <img class="logo__img" src="../img/lanit_logo.svg" alt="">
+            <p class="logo__text"><small>.</small>Карьера</p>
+          </a>
+        </div>
+        <p class="footer__copyright">© ЛАНИТ 1989 – 2019</p>
+        <p class="footer__version">0.1.0</p>
+      </div>
+    </footer>
+  </form>
+
+  <!-- МОДАЛЬНОЕ ОКНО -->
+  <div id="sendResume" class="modal" style="display: none;">
+    <div class="modal__bg"></div>
+    <div class="modal__box" data-simplebar>
+      <div class="modal__head">
+        <div class="modal__close" title="Закрыть"></div>
+        <h2 class="modal__title">Хочу в Ланит</h2>
+        <p class="modal__text">Хотите работать в ЛАНИТ, но не нашли подходящую вакансию? А может быть, еще не готовы всерьез говорить о смене работы, но уже хотели бы с нами познакомиться?</p>
+        <p class="modal__text"><strong>Заявите о себе, отправив резюме - и мы постараемся предложить вам наиболее подходящую вакансию!</strong></p>
+        <div class="tabs-nav tabs-nav--modal">
+          <a href="#tab-1" class="tabs-nav__link">Приложить резюме</a>
+          <a href="#tab-2" class="tabs-nav__link tabs-nav__link--active">Заполнить резюме</a>
+        </div>
+      </div>
+      <div class="tabs">
+        <div id="tab-1" class="tabs__tab"  style="display: none;">
+            <form action="" class="form form--dropResume">
+            <div class="modal__body">
+              <div class="form__box">
+                <div class="form-grid">
+                  <fieldset class="fieldset">
+                    <legend class="fieldset__title text-required">Фамилия</legend>
+                    <div class="form-field form-field--error">
+                      <input type="text" class="form-field__input" value="Иванова">
+                    </div>
+                    <p class="fieldset__error">поле необходимо заполнить</p>
+                  </fieldset>
+                  <fieldset class="fieldset">
+                    <legend class="fieldset__title text-required">Имя</legend>
+                    <div class="form-field">
+                      <input type="text" class="form-field__input">
+                    </div>
+                  </fieldset>
+                  <fieldset class="fieldset">
+                    <legend class="fieldset__title text-required">E-mail</legend>
+                    <div class="form-field form-field--error">
+                      <input type="text" class="form-field__input">
+                    </div>
+                    <p class="fieldset__error">поле необходимо заполнить</p>
+                  </fieldset>
+                  <fieldset class="fieldset">
+                    <legend class="fieldset__title text-required">Номер телефона</legend>
+                    <div class="form-field form-field--error">
+                      <input type="text" name="phone" placeholder="+7 (___) ___-____" class="form-field__input">
+                    </div>
+                    <p class="fieldset__error">поле необходимо заполнить</p>
+                  </fieldset>
+                </div>
+                <fieldset class="fieldset">
+                  <legend class="fieldset__title text-required">Файл</legend>
+                  <div class="fileinput">  
+                    <label class="fileinput__wrapper">
+                      <input class="fileinput__input" type="file">
+                      <div class="fileinput__btn btn btn--light btn--download">
+                        <img src="../img/download.svg" alt="">
+                        <span>Загрузить файл</span>
+                      </div>
+                    </label>                        
+                    <p class="fileinput__error">error</p>
+                    <p class="fileinput__files"></p>
+                    <div class="fileinput__remove"></div>
+                  </div>
+                </fieldset>
+                <fieldset class="fieldset">
+                  <legend class="fieldset__title">Дополнительная информация</legend>
+                  <div class="form-field form-field--textarea">
+                    <textarea class="form-field__input"></textarea>
+                  </div>
+                </fieldset>
+              </div>
+            </div>
+            <div class="modal__footer">
+              <div class="captcha">
+                <label class="checkbox">
+                  <input type="checkbox" class="checkbox__input">
+                  <div class="checkbox__icon"></div>
+                  <div class="checkbox__title">Я даю своё <a href="">согласие на передачу персональных данных</a></div>
+                </label>
+                <div class="g-recaptcha" data-sitekey="6KepjAsTFFFFFFMqccY0ZiGqc3TEd3YVxo8cHsGX"></div>
+              </div>
+              <div class="form__control">
+                <button type="reset" class="reset-form text-btn">
+                  <img src="../img/small-close.svg" alt="" class="text-btn__img">
+                  <span class="text-btn__text">Отменить</span>
+                </button>
+                <input type="submit" value="Отправить резюме" class="btn btn--orange btn--submit">
+              </div>
+            </div>
+          </form>
+        </div>
+        <div id="tab-2" class="tabs__tab">
+          <form action="" class="form">
+            <div class="modal__body">
+              <div class="form__box">
+                <section class="slide-toggle">
+                  <h2 class="slide-toggle__head form__title">Персональные данные</h2>
+                  <div class="slide-toggle__body">
+                    <fieldset class="fieldset">
+                      <legend class="fieldset__title text-required">Фамилия</legend>
+                      <div class="form-field">
+                        <input type="text" class="form-field__input" value="Иванова">
+                      </div>
+                    </fieldset>
+                    <fieldset class="fieldset">
+                      <legend class="fieldset__title text-required">Имя</legend>
+                      <div class="form-field">
+                        <input type="text" class="form-field__input" value="Марина">
+                      </div>
+                    </fieldset>
+                    <fieldset class="fieldset">
+                      <legend class="fieldset__title">Отчество</legend>
+                      <div class="form-field">
+                        <input type="text" class="form-field__input">
+                      </div>
+                    </fieldset>
+                    <fieldset class="fieldset">
+                      <legend class="fieldset__title">Город проживания</legend>
+                      <div class="form-field">
+                        <input type="text" class="form-field__input">
+                      </div>
+                    </fieldset>
+                    <fieldset class="fieldset">
+                      <legend class="fieldset__title text-required">E-mail</legend>
+                      <div class="form-field">
+                        <input type="text" class="form-field__input">
+                      </div>
+                    </fieldset>
+                    <fieldset class="fieldset">
+                      <legend class="fieldset__title text-required">Дата рождения</legend>
+                      <div class="form-field">
+                        <input type="text" class="form-field__input input-date" value="13.10.1985">
+                      </div>
+                    </fieldset>
+                    <fieldset class="fieldset">
+                      <legend class="fieldset__title text-required">Телефон мобильный</legend>
+                      <div class="form-field">
+                        <input type="text" name="phone" placeholder="+7 (___) ___-____" class="form-field__input" value="+7 916 961 6292">
+                      </div>
+                    </fieldset>
+                  </div>
+                </section>
+                <section class="slide-toggle">
+                  <h2 class="slide-toggle__head form__title">Общие сведения</h2>
+                  <div class="slide-toggle__body">
+                    <fieldset class="fieldset">
+                      <legend class="fieldset__title">Навыки</legend>
+                      <div class="form-field form-field--textarea">
+                        <textarea class="form-field__input" style="min-height: 82px;"></textarea>
+                      </div>
+                    </fieldset>
+                    <fieldset class="fieldset">
+                      <legend class="fieldset__title">Предполагаемый доход</legend>
+                      <div class="form-field form-field--cost">
+                        <input type="text" class="form-field__input">
+                      </div>
+                    </fieldset>
+                    <fieldset class="fieldset">
+                      <label class="checkbox">
+                        <input type="checkbox" class="checkbox__input">
+                        <div class="checkbox__icon"></div>
+                        <div class="checkbox__title">Готовность к переезду</div>
+                      </label>
+                    </fieldset>
+                  </div>
+                </section>
+                <section class="slide-toggle">
+                  <h2 class="slide-toggle__head form__title">Профессиональные предпочтения</h2>
+                  <div class="slide-toggle__body">
+                    <fieldset class="fieldset">
+                      <legend class="fieldset__title text-required">Профессиональные области</legend>
+                      <div class="select">
+                        <select>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                        </select>
+                      </div>
+                    </fieldset>
+                  </div>
+                </section>
+                <section class="slide-toggle">
+                  <h2 class="slide-toggle__head form__title">Образование</h2>
+                  <div class="slide-toggle__body">
+                    <div class="fieldbox">
+                      <fieldset class="fieldset">
+                        <legend class="fieldset__title">Название учебного заведения</legend>
+                        <div class="form-field">
+                          <input type="text" class="form-field__input">
+                        </div>
+                      </fieldset>
+                      <fieldset class="fieldset">
+                        <legend class="fieldset__title">Город обучения</legend>
+                        <div class="form-field">
+                          <input type="text" class="form-field__input">
+                        </div>
+                      </fieldset>
+                      <fieldset class="fieldset">
+                        <legend class="fieldset__title">Специализация</legend>
+                        <div class="form-field">
+                          <input type="text" class="form-field__input">
+                        </div>
+                      </fieldset>
+                      <fieldset class="fieldset">
+                        <legend class="fieldset__title">Уровень образования</legend>
+                        <div class="select">
+                          <select>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                          </select>
+                        </div>
+                      </fieldset>
+                      <fieldset class="fieldset fieldset--withHint">
+                        <legend class="fieldset__title">Год окончания</legend>
+                        <div class="form-field">
+                          <input type="text" class="form-field__input">
+                        </div>
+                        <p class="fieldset__hint">Если учитесь в настоящее время, укажите год предполагаемого окончания</p>
+                      </fieldset>
+                    </div>
+                    <fieldset class="fieldset fieldset--add">
+                      <button class="btn btn--light btn--add">
+                        <img src="../img/plus.svg" alt="">
+                        <span>Добавить</span>
+                      </button>
+                    </fieldset>
+                  </div>
+                </section>
+                <section class="slide-toggle">
+                  <h2 class="slide-toggle__head form__title">Наличие опыта работы</h2>
+                  <div class="slide-toggle__body">
+                    <div class="fieldbox">
+                      <fieldset class="fieldset fieldset--radio">
+                        <label class="radiobutton">
+                          <input type="radio" name="foo" checked class="radiobutton__input">
+                          <div class="radiobutton__icon"></div>
+                          <div class="radiobutton__title">Есть опыт работы</div>
+                        </label>
+                        <label class="radiobutton">
+                          <input type="radio" name="foo" class="radiobutton__input">
+                          <div class="radiobutton__icon"></div>
+                          <div class="radiobutton__title">Нет опыта работы</div>
+                        </label>
+                      </fieldset>
+                      <fieldset class="fieldset">
+                        <legend class="fieldset__title">Название компании</legend>
+                        <div class="form-field">
+                          <input type="text" class="form-field__input">
+                        </div>
+                      </fieldset>
+                      <fieldset class="fieldset">
+                        <label class="checkbox">
+                          <input type="checkbox" class="checkbox__input">
+                          <div class="checkbox__icon"></div>
+                          <div class="checkbox__title">Текущий работодатель</div>
+                        </label>
+                      </fieldset>
+                      <fieldset class="fieldset">
+                        <legend class="fieldset__title">Должность</legend>
+                        <div class="form-field">
+                          <input type="text" class="form-field__input">
+                        </div>
+                      </fieldset>
+                      <div class="form-grid">
+                        <fieldset class="fieldset">
+                          <legend class="fieldset__title">Начало работы в компании</legend>
+                          <div class="select-dates">
+                            <div class="select">
+                              <select>
+                                <option value="январь">январь</option>
+                                <option value="сентябрь">сентябрь</option>
+                              </select>
+                            </div>
+                            <div class="select">
+                              <select>
+                                <option value="2019">2019</option>
+                                <option value="2019">2019</option>
+                              </select>
+                            </div>
+                          </div>
+                        </fieldset>
+                        <fieldset class="fieldset">
+                          <legend class="fieldset__title">Окончание работы в компании</legend>
+                          <div class="select-dates">
+                            <div class="select">
+                              <select>
+                                <option value="январь">январь</option>
+                                <option value="сентябрь">сентябрь</option>
+                              </select>
+                            </div>
+                            <div class="select">
+                              <select>
+                                <option value="2019">2019</option>
+                                <option value="2019">2019</option>
+                              </select>
+                            </div>
+                          </div>
+                        </fieldset>
+                      </div>
+                      <fieldset class="fieldset">
+                        <legend class="fieldset__title">Общее описание</legend>
+                        <div class="form-field form-field--textarea">
+                          <textarea class="form-field__input"></textarea>
+                        </div>
+                      </fieldset>
+                    </div>
+                    <fieldset class="fieldset fieldset--add">
+                      <button class="btn btn--light btn--add">
+                        <img src="../img/plus.svg" alt="">
+                        <span>Добавить</span>
+                      </button>
+                    </fieldset>
+                  </div>
+                </section>
+              </div>
+              <div class="form__box">
+                <h2 class="form__title">Вложения</h2>
+                <div class="fileinput">  
+                  <label class="fileinput__wrapper">
+                    <input class="fileinput__input" type="file">
+                    <div class="fileinput__btn btn btn--light btn--download">
+                      <img src="../img/download.svg" alt="">
+                      <span>Загрузить файл</span>
+                    </div>
+                  </label>                        
+                  <p class="fileinput__error">error</p>
+                  <p class="fileinput__files"></p>
+                  <div class="fileinput__remove"></div>
+                </div>
+              </div>
+            </div>
+            <div class="modal__footer">
+              <div class="captcha">
+                <label class="checkbox">
+                  <input type="checkbox" class="checkbox__input">
+                  <div class="checkbox__icon"></div>
+                  <div class="checkbox__title">Я даю своё <a href="">согласие на передачу персональных данных</a></div>
+                </label>
+                <div class="g-recaptcha" data-sitekey="6KepjAsTFFFFFFMqccY0ZiGqc3TEd3YVxo8cHsGX"></div>
+              </div>
+              <div class="form__control">
+                <button type="reset" class="reset-form text-btn">
+                  <img src="../img/small-close.svg" alt="" class="text-btn__img">
+                  <span class="text-btn__text">Отменить</span>
+                </button>
+                <input type="submit" value="Отправить резюме" class="btn btn--orange btn--submit">
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
+<script src='https://www.google.com/recaptcha/api.js'></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/js/select2.min.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/air-datepicker/2.2.3/js/datepicker.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/simplebar/4.2.3/simplebar.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.js'></script>
+<script src="../js/jquery.liLanding.js"></script>
+<script src="../js/script.js"></script>
+</body>
+</html>

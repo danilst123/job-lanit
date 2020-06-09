@@ -1,0 +1,118 @@
+.vacancy-page
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+  @media screen and (max-width: $xs-max)
+    flex-direction: column
+
+  &__company
+    order: 1
+    width: 100%
+    margin-bottom: 50px
+    @media screen and (max-width: $sm-max)
+      margin-bottom: 30px
+    @media screen and (max-width: $xs-max)
+      margin-bottom: 20px
+  
+  &__info
+    order: 2
+    width: calc(100% - 260px)
+    margin-bottom: 60px
+    color: #424242
+    font-family: "PF Beau Sans Pro - Bbook", Arial, sans-serif
+    font-size: 15px
+    font-weight: 400
+    line-height: 20px
+    @media screen and (max-width: $sm-max)
+      margin-bottom: 30px
+    @media screen and (max-width: $xs-max)
+      order: 3
+      width: 100%
+    h2
+      color: #ff7415
+      font-family: $main_font
+      font-size: 18px
+      font-weight: 700
+      line-height: 24px
+      text-transform: uppercase
+      margin: 45px 0 12px
+      @media screen and (max-width: $xs-max)
+        margin-top: 30px
+      @media screen and (max-width: $xs-max)
+        order: 2
+        font-size: 16px
+        line-height: 20px
+    p
+      margin: 0 0 15px
+    ul
+      padding: 0
+      margin: 0 0 15px
+      list-style-type: none
+      ul
+        margin-top: 10px
+      li
+        min-height: 20px
+        position: relative
+        padding-left: 30px
+        @media screen and (max-width: $xs-max)
+          min-height: 15px
+        & + li
+          margin-top: 10px
+          @media screen and (max-width: $xs-max)
+            margin-top: 5px
+        &:before
+          content: '—'
+          position: absolute
+          top: 0
+          left: 0
+    & > *:first-child
+      margin-top: 0
+    & > *:last-child
+      margin-bottom: 0
+  &__aside
+    order: 3
+    width: 240px
+    @media screen and (max-width: $sm-max)
+      margin-bottom: 30px
+    @media screen and (max-width: $xs-max)
+      order: 2
+      width: 100%
+  
+  &__map
+    order: 5
+    width: 100%
+    margin-bottom: 30px
+  
+  &__footer
+    order: 5
+    width: 100%
+    display: flex
+    align-items: center
+    justify-content: space-between
+    @media screen and (max-width: $xs-max)
+      flex-direction: column
+      padding-bottom: 20px
+  
+  &__return
+    display: inline-flex
+    align-items: center
+    color: #10a9ea !important
+    font-family: $main_font
+    font-size: 15px
+    font-weight: 400
+    line-height: 20px
+    text-decoration: none
+    @media screen and (max-width: $xs-max)
+      margin-top: 25px
+      order: 2
+    &:before
+      content: ''
+      flex-shrink: 0
+      height: 20px
+      width: 18px
+      background-image: url("../img/arrow-right.svg")
+      background-repeat: no-repeat
+      background-position: center
+      margin-right: 8px
+    &:hover span
+      text-decoration: underline

@@ -1,0 +1,73 @@
+.logo
+  width: 250px
+
+  @media screen and (max-width: $xs-max)
+    width: auto
+
+  & &__link
+    display: flex
+    align-items: flex-end
+    text-decoration: none
+  
+  & &__img
+    height: 30px
+    width: 129px
+
+    @media screen and (max-width: $xs-max)
+      height: 20px
+      width: 89px
+
+  & &__text
+    color: #029fde
+    font-family: $main_font
+    font-size: 16px
+    font-weight: 500
+    line-height: 1
+    text-transform: uppercase
+    letter-spacing: 0.32px
+    margin: 0
+    margin-bottom: 7px
+    margin-left: 2px
+    pointer-events: none
+    white-space: nowrap
+
+    @media screen and (max-width: $xs-max)
+      font-size: 12px
+      margin-left: 2px
+      margin-bottom: 4px
+
+    span
+      font-size: 28px
+      font-weight: 400
+
+      @media screen and (max-width: $xs-max)
+        font-size: 20px
+
+    small
+      font-size: inherit
+      display: inline-block
+      margin-right: 3px
+
+
+  & &__descr
+    width: 100%
+    color: #6a6a6a
+    font-family: $main_font
+    font-size: 13px
+    font-weight: 300
+    line-height: 1
+    letter-spacing: 0.12px
+    margin: 0
+    margin-top: 5px
+
+    @media screen and (max-width: $xs-max)
+      font-size: 11px
+
+    a, a:focus, a:hover
+      color: #009ede
+      letter-spacing: 0.12px
+      text-decoration: underline
+      text-transform: uppercase
+
+    a:hover
+      text-decoration: none

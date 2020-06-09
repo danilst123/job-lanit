@@ -1,0 +1,209 @@
+.grid
+  width: calc(100% + 20px)
+  display: flex
+  flex-wrap: wrap
+  margin: -10px
+
+  @media screen and (max-width: $xs-max)
+    display: block
+    width: 100%
+    margin: -20px 0
+
+  &__item
+    display: flex
+    flex-direction: column
+    margin: 10px
+
+    &--grey
+      background-color: #f7f7f7
+      padding: 25px 30px
+
+    &--fullwide
+      width: 100%
+      @media screen and (max-width: $sm-max)
+        display: block
+
+    &--twothirdwide
+      width: calc(66.66% - 20px)
+      @media screen and (max-width: $sm-max)
+        width: calc(100% - 20px)
+      @media screen and (max-width: $xs-max)
+        width: 100%
+
+    &--halfwide
+      width: calc(50% - 20px)
+      @media screen and (max-width: $sm-max)
+        width: calc(100% - 20px)
+      @media screen and (max-width: $xs-max)
+        width: 100%
+
+    &--thirdwide
+      width: calc(33.33% - 20px)
+      @media screen and (max-width: $xs-max)
+        width: 100%
+
+    &--quarterwide
+      width: calc(25% - 20px)
+      @media screen and (max-width: $sm-max) and (min-width: $sm-min)
+        width: calc(50% - 20px)
+      @media screen and (max-width: $xs-max)
+        width: 100%
+
+    &--self-end
+      align-self: flex-end
+
+    &--premountains
+      width: 330px
+      @media screen and (max-width: $md-max)
+        width: calc(100% - 20px)
+    
+    &--mountains
+      width: calc(100% - 370px)
+      min-height: 80px  
+      position: relative
+      @media screen and (max-width: $md-max)
+        width: calc(100% - 20px)
+      .internship-path
+        position: absolute
+        bottom: -140px
+        right: 0
+        @media screen and (max-width: $md-max)
+          position: relative
+          bottom: 0
+          right: 0
+        @media screen and (max-width: $sm-max)
+          width: calc(100% + 30px)
+          margin-left: -15px
+
+    &--aftermountains
+      @media screen and (min-width: $lg-min)
+        min-height: 275px
+    
+    
+    .webpart
+      flex-grow: 1
+
+      & + .webpart
+        margin-top: 20px
+
+  &--1
+    .grid__item
+      width: calc(33.33% - 20px)
+      @media screen and (max-width: $sm-max)
+        width: calc(50% - 20px)
+      @media screen and (max-width: $xs-max)
+        display: block
+        width: 100%
+        margin: 20px 0
+      &--wide
+        width: calc(66.66% - 20px)
+        flex-direction: row
+        @media screen and (max-width: $sm-max)
+          order: 2
+          width: calc(100% - 20px)
+        @media screen and (max-width: $xs-max)
+          display: block
+          width: 100%
+          margin: 20px 0
+        .webpart + .webpart
+          margin-top: 0
+          margin-left: 20px
+
+  &--2
+    display: block
+    &:before, &:after
+      content: ''
+      display: table
+      clear: both
+    .grid__item
+      float: left
+      width: calc(25% - 20px)
+      @media screen and (max-width: $sm-max)
+        width: calc(50% - 20px)
+      @media screen and (max-width: $xs-max)
+        float: none
+        display: block
+        width: 100%
+        margin: 20px 0
+      .webpart
+        min-height: 167px 
+        &__text
+          min-height: 167px
+          padding: 15px 25px
+          @media screen and (max-width: $md-max)
+            padding: 15px
+      .video-link__play
+        height: 58px
+        width: 58px
+      &--big
+        width: calc(50% - 20px)
+        @media screen and (max-width: $xs-max)
+          width: 100%
+        .webpart
+          min-height: 354px
+          @media screen and (max-width: $xs-max)
+            min-height: 300px
+          &__text
+            min-height: 354px
+            padding: 40px 45px
+            @media screen and (max-width: $md-max)
+              padding: 20px
+            @media screen and (max-width: $xs-max)
+              min-height: 300px
+        .video-link__play
+          width: 66px
+          height: 66px
+          top: 45% !important
+          h3
+            font-size: 24px
+            line-height: 30px
+            @media screen and (max-width: $xs-max)
+              margin-bottom: 8px
+
+  &--3
+    .grid__item
+      width: calc(33.33% - 20px)
+      @media screen and (max-width: $sm-max)
+        width: calc(50% - 20px)
+      @media screen and (max-width: $xs-max)
+        display: block
+        width: 100%
+        margin: 20px 0
+      &--pic
+        @media screen and (max-width: $xs-max)
+          display: none
+      .webpart
+        min-height: 325px
+        @media screen and (max-width: $xs-max)
+          min-height: 270px
+        &__text
+          min-height: 325px
+          @media screen and (max-width: $xs-max)
+            min-height: 270px
+
+  &--internship
+    position: relative
+    justify-content: space-between
+    @media screen and (max-width: $xs-max)
+      display: block
+      width: 100%
+      margin: 0
+    .grid__item
+      flex-direction: row
+      @media screen and (max-width: $xs-max)
+        display: block
+        width: 100%
+        margin: 0
+      & + .grid__item
+        @media screen and (max-width: $xs-max)
+          margin-top: 20px
+      .section-title
+        margin: 30px 0 10px
+        @media screen and (max-width: $xs-max)
+          margin-top: 35px
+      &--quarterwide
+        .webpart
+          min-height: 167px
+          &__text
+            min-height: 167px
+            padding: 15px 25px

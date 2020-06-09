@@ -1,0 +1,31 @@
+.nav
+  display: flex
+  align-items: center
+  margin: -2px -7px
+
+  & &__item
+    color: #424242
+    font-family: $main_font
+    font-size: 14px
+    font-weight: 500
+    line-height: 30px
+    text-transform: uppercase
+    letter-spacing: -0.15px
+    text-decoration: none
+    transition: color 0.2s
+    margin: 2px 7px
+
+    @media screen and (max-width: $md-max)
+      font-size: 20px
+      line-height: 36px
+
+    @media screen and (max-width: $xxs-max)
+      font-size: 18px
+      line-height: 30px
+
+    &:hover, &.cur
+      color: #ff7415
+
+    &:nth-child(4)
+      @media screen and (max-width: $xs-max)
+        display: none

@@ -1,0 +1,140 @@
+.modal
+  height: 100vh /* Fallback for browsers that do not support Custom Properties */
+  height: calc(var(--vh, 1vh) * 100)
+  width: 100%
+  min-width: 320px 
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  position: fixed
+  z-index: 99000
+  top: 0
+  left: 0
+
+  & &__bg
+    height: 100%
+    width: 100%
+    min-width: 320px
+    position: fixed
+    z-index: 99100
+    top: 0
+    left: 0
+    background-color: rgba(0, 0, 0, 0.8)
+
+  & &__box
+    position: relative
+    z-index: 99200
+    max-height: calc(100% - 40px)
+    overflow: auto
+    width: 100%
+    max-width: 580px
+    min-width: 320px
+    background-color: #f7f7f7
+    overscroll-behavior: none
+    -webkit-overflow-scrolling: touch
+
+    @media screen and (max-width: 619px)
+      height: 100%
+      max-width: 100%
+      max-height: 100%
+
+  & &__head
+    width: 100%
+    text-align: center
+    position: relative
+    background-color: #ffffff
+    padding: 30px 80px
+
+    @media screen and (max-width: 619px)
+      padding: 25px 30px
+
+  & &__body
+    width: 100%
+    padding: 30px 80px
+
+    @media screen and (max-width: 619px)
+      padding: 25px 50px
+
+    @media screen and (max-width: 459px)
+      padding: 25px 15px
+
+  & &__footer
+    width: 100%
+    background-color: #ffffff
+    padding: 30px 80px
+
+    @media screen and (max-width: 619px)
+      padding: 25px 50px
+
+    @media screen and (max-width: 459px)
+      padding: 25px 15px
+
+  & &__title
+    display: flex
+    align-items: center
+    justify-content: center
+    color: #424242
+    font-family: $main_font
+    font-size: 25px
+    font-weight: 700
+    line-height: 1.2
+    text-transform: uppercase
+
+    @media screen and (max-width: $xxs-max)
+      font-size: 20px
+
+    &:not(:last-child)
+      margin-bottom: 22px
+
+      @media screen and (max-width: $xxs-max)
+        margin-bottom: 15px
+
+  & &__close
+    height: 40px
+    width: 40px
+    position: absolute
+    z-index: 5 
+    top: 0
+    right: 0
+    background-image: url('../img/close.svg')
+    background-repeat: no-repeat
+    background-position: center
+    cursor: pointer
+
+  & &__text
+    color: #424242
+    font-family: $main_font
+    font-size: 14px
+    font-weight: 400
+    line-height: 18px
+    margin: 0
+
+    &--success
+      text-align: center
+      font-size: 22px
+      line-height: 1.2
+
+    strong
+      font-weight: 600
+
+  & &__text + &__text
+    margin-top: 15px
+
+  &--2
+    z-index: 99300
+    .modal
+      &__bg
+        z-index: 99400
+        opacity: 0.5
+      &__box
+        z-index: 99500
+
+  &--3
+    z-index: 99600
+    .modal
+      &__bg
+        z-index: 99700
+        opacity: 0.5
+      &__box
+        z-index: 99800

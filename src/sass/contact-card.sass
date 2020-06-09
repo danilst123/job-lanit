@@ -1,0 +1,102 @@
+.contact-card
+  width: 100%
+  background-color: #10a9ea
+  padding: 0 32.5px 45px 
+  @media screen and (max-width: $xs-max)
+    display: flex
+    align-items: flex-start
+    flex-wrap: wrap
+    width: calc(100% + 30px)
+    padding: 30px 15px
+    margin-left: -15px
+
+  &__pic
+    display: block
+    height: auto
+    width: calc(100% + 65px)
+    margin: 0 -32.5px 30px
+    @media screen and (max-width: $xs-max)
+      width: 120px
+      margin: 0
+    @media screen and (max-width: 360px)
+      width: 100px
+
+  &__text
+    @media screen and (max-width: $xs-max)
+      width: calc(100% - 120px)
+      padding-left: 20px
+    @media screen and (max-width: 360px)
+      width: calc(100% - 100px)
+      padding-left: 15px    
+  
+  &__title
+    color: rgba(255, 255, 255, 0.49)
+    font-family: "PF Beau Sans Pro - Bbook", Arial, sans-serif
+    font-size: 15px
+    font-weight: 400
+    line-height: 26px
+    margin: 0 0 5px
+    @media screen and (max-width: 360px)
+      font-size: 13px
+      line-height: 1.4
+  
+  &__name
+    color: #ffffff
+    font-family: $main_font
+    font-size: 18px
+    font-weight: 700
+    line-height: 24px
+    text-transform: uppercase
+    margin: 0 0 18px
+    @media screen and (max-width: 360px)
+      font-size: 16px
+      line-height: 1.4
+  
+  &__contacts
+    padding: 0
+    margin: 0
+    list-style-type: none
+    color: #ffffff
+    font-family: "PF Beau Sans Pro - Bbook", Arial, sans-serif
+    font-size: 15px
+    font-weight: 400
+    line-height: 20px
+    li
+      &:first-child
+        a
+          padding-left: 30px
+          &:before
+            top: 0
+            left: 0
+            background-image: url("../img/icon-mail.svg")
+            background-position: left top
+      &:last-child
+        a
+          padding-left: 35px
+          &:before
+            top: 2px
+            left: -1px
+            background-image: url("../img/icon-phone.svg")
+            background-position: left top 2px        
+      a
+        color: inherit
+        text-decoration: none
+        position: relative
+        display: inline-block
+        &:before
+          content: ''
+          position: absolute
+          width: 25px
+          height: 20px
+          background-repeat: no-repeat
+        &:hover
+          text-decoration: underline
+      & + li
+        margin-top: 12px  
+  
+  &__btn
+    display: flex
+    width: 175px
+    margin: 20px auto 0
+    @media screen and (max-width: $xs-max)
+      margin-top: 30px

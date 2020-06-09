@@ -1,0 +1,45 @@
+.jobs
+  overflow: hidden
+  padding: 40px 0 55px
+
+  @media screen and (max-width: $md-max)
+    padding: 25px 0
+
+  & &__slider
+    margin: 0 !important
+
+    @media screen and (max-width: $md-max)
+      width: calc(100% - 50px)
+      margin: 0 auto !important
+
+    .slick
+      &-list
+        @media screen and (min-width: $lg-min)
+          overflow: visible
+
+      &-track
+        display: flex !important
+
+        @media screen and (max-width: $sm-max)
+          display: block !important
+
+      &-slide
+        height: inherit !important
+
+        @media screen and (max-width: $sm-max)
+          height: 100% !important
+
+        &:not(.slick-active)
+          filter: blur(2px)
+          pointer-events: none
+
+          @media screen and (max-width: $sm-max)
+            filter: none
+
+  & &__all
+    width: 200px
+    display: flex
+    margin: 35px auto 0
+
+    @media screen and (max-width: $xs-max)
+      margin-top: 30px

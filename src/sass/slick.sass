@@ -1,0 +1,57 @@
+.slick-slider .slick
+  &-list
+    margin: 0 -10px
+
+  &-slide
+    margin: 0 10px
+
+  &-prev, &-next
+    font-size: 0
+    margin: 0
+    width: 23px
+    min-width: auto
+    height: 36px
+    z-index: 10
+    background: url('../img/chevron-left.svg') no-repeat center
+    transition: opacity 0.3s
+    
+    &:hover, &:focus
+      background: url('../img/chevron-left.svg') no-repeat center
+
+    &:hover
+      opacity: 0.8
+
+    &:before
+      display: none
+
+  &-prev
+    left: -35px
+
+    @media screen and (max-width: $md-max)
+      left: -32px
+
+  &-next
+    right: -35px
+    transform: translateY(-50%) rotate(180deg)
+
+    @media screen and (max-width: $md-max)
+      right: -32px
+
+  &-dots
+    position: static
+    margin-top: 30px
+
+    li
+      width: 10px
+      height: 10px
+      border: 2px solid #10a9ea
+      background-color: #ffffff
+      border-radius: 50%
+      transition: background 0.3s
+      margin: 0 3px
+
+      &.slick-active
+        background: #10a9ea
+
+      button
+        display: none

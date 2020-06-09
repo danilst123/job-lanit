@@ -1,0 +1,87 @@
+*
+  box-sizing: inherit
+  &:before, &:after
+    box-sizing: inherit
+
+\:focus
+  outline: none
+
+html
+  box-sizing: border-box
+  height: 100vh /* Fallback for browsers that do not support Custom Properties */
+  height: calc(var(--vh, 1vh) * 100)
+  width: 100%
+
+  &.noscroll
+    overflow: hidden !important
+    position: relative
+
+body
+  height: 100vh /* Fallback for browsers that do not support Custom Properties */
+  height: calc(var(--vh, 1vh) * 100)
+  width: 100%
+  min-width: 320px
+  margin: 0
+  padding: 0
+  padding-left: env(safe-area-inset-left)
+  padding-right: env(safe-area-inset-right)
+  background-color: #fff
+  text-rendering: optimizeLegibility
+  text-decoration-skip: objects
+  text-size-adjust: 100%
+  -webkit-font-smoothing: antialiased
+  -webkit-tap-highlight-color: transparent
+  display: flex
+  flex-direction: column
+  overflow: visible
+
+  &.noscroll
+    overflow: hidden !important
+    position: relative
+
+.wrapper
+  flex-grow: 1
+  flex-shrink: 0
+  display: flex
+  flex-direction: column
+  width: 100%    
+  min-width: 320px
+  padding: 0
+  padding-top: 90px
+
+  @media screen and (max-width: $sm-max)
+    padding-top: 80px
+
+  @media screen and (max-width: $xs-max)
+    padding-top: 70px
+
+
+.page
+  display: flex
+  flex-direction: column
+  flex-grow: 1
+  flex-shrink: 0
+  margin: 0
+  &--vacancySearch
+    padding: 45px 0
+    @media screen and (max-width: $md-max)
+      padding: 20px 0
+  &--internship
+    overflow-x: hidden
+    padding: 30px 0  
+    @media screen and (max-width: $xxs-max)  
+      padding: 20px 0 
+
+.container 
+  width: 100%    
+  max-width: $container-max-width
+  min-width: 320px
+  padding: 0 15px
+  margin: 0 auto
+  @media screen and (max-width: $md-max)
+    max-width: $md-max
+
+menu
+  display: block
+  margin: 0
+  padding: 0

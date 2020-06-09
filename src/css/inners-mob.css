@@ -1,0 +1,306 @@
+.vacancy_search .btnSeaction {
+  -ms-align-items: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 991px) {  
+  
+  body, html {
+    min-width: 320px;
+    width: 100% !important;
+  }
+
+  body > form#aspnetForm {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    -webkit-flex-shrink: 0;
+        -ms-flex-negative: 0;
+            flex-shrink: 0;
+  }
+
+  .ms-breadcrumb-dropdownBox {
+  display: none;
+  }
+
+  .vacancyTitle {
+  padding-top: 20px;
+  }
+
+  #DeltaPlaceHolderMain > div > table {
+    width: 100%;
+  }
+
+  #contentBox {
+    min-width: 320px;
+  }
+
+  #s4-workspace {
+    height: auto !important;
+    width: 100% !important;
+  }
+
+  #s4-bodyContainer {
+    height: auto !important;
+    width: 100% !important;
+    min-width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* ============= */
+  #DeltaPlaceHolderMain {
+    width: 100% !important;
+  }
+  .vacancy_search {
+    padding: 15px;
+  }
+  .vacancy_search .btnSeaction {
+    margin-top: 15px;
+  }
+  .table_searchProperties tr:not(:last-child) {
+    display: block;
+    margin-bottom: 10px;
+  }
+  .table_searchProperties td {
+    display: block;
+    width: 100% !important;
+    text-align: left !important;
+    padding: 0 !important;
+  }
+
+  .table_searchProperties tr:nth-child(2) td:nth-child(2) {
+    margin-bottom: 10px;
+  }
+
+  .rightColumn {
+    display: block;
+    width: 100%;
+  }
+
+  .rightColumn {
+    padding: 0 10px;
+  }
+
+  .searchResult {
+    padding: 0 !important;
+  }
+
+  .searchResult div.ms-srch-item {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 5px 10px 10px 10px !important;
+  }
+
+  .resultSearch,
+  .resultSearch tbody,
+  .resultSearch tr {
+    display: block;
+    width: 100%;
+  }
+
+  .resultSearch tr:after,
+  .resultSearch tr:before {
+    content: '';
+    display: block;
+    clear: both;
+    line-height: 0;
+  }
+
+  .resultSearch td:nth-of-type(1) {
+    padding-top: 5px;
+    width: calc(100% - 40px);
+    float: left;
+  }
+  .resultSearch td:nth-of-type(1):not(:only-of-type) {
+    min-height: 35px;
+  }
+  .resultSearch td:nth-of-type(2) {
+    width: 40px;
+    float: right;
+    padding-left: 10px;
+  }
+  .resultSearch td:nth-of-type(3) {
+    width: 40px;
+    float: right;
+    padding-left: 10px;
+  }
+
+  .ms-srch-item .hotVacancy,
+  .ms-srch-item .forYoung {
+    padding: 0 !important;
+  }
+
+  #Refinement {
+    max-width: 100%;
+  }
+
+  .ms-ref-refiner {
+    display: none;
+  }
+
+  .ms-ref-refiner #Container {
+    padding: 0;
+  }
+
+  .ms-ref-refinername:link, 
+  .ms-ref-refinername:visited {
+    width: 100%;
+  }
+
+  .ms-ref-refiner #Value, .ms-ref-unsel-toggle, #OtherValue, #SubmitValue {
+    width: 100%;
+  }
+
+  .ms-srch-ellipsis {
+    white-space: normal !important;
+  }
+
+  .response-link {
+    float: none !important;
+    display: block;
+    margin: 0;
+    font-size: 13px;
+  }
+
+  .ms-srch-hover-outerContainer {
+    display: none !important;
+    -webkit-border-radius: 4px;
+            border-radius: 4px;
+  }
+
+  .search-area-menu {
+    padding: 10px;
+  }
+
+  .footer {
+    margin: 0;
+    padding: 0 !important;
+  }
+
+  .vacancy_search .btnSeaction {
+    display: block !important;
+    float: none !important;
+  }
+
+  .vacancy_search .btnSeaction a {
+    display: block;
+  }
+
+  .search-button, .search-button:link, .search-button:visited, .search-button:active {
+    margin: 10px 0 0;
+  }
+
+
+  /* VACANCY SEARCH */
+  #SearchView, #mapView, .create-vacancy-link, .leftColumn {
+    display: none;
+  }
+
+  form[action*='vacancy/Pages/search.aspx'] #DeltaPlaceHolderMain,
+  div.vacancy_search,
+  div.search-area-menu,
+  .rightColumn {
+    width: 100% !important;
+  }
+
+
+  /* VACANCY */
+  body {
+    overflow: visible;
+  }
+
+  .vacancy * {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+
+  .vacancy img {
+    max-width: 100%;
+  }
+
+  .vacancy .left, 
+  .vacancy .right {
+    width: 100%;
+    float: none;
+    padding: 0;
+    display: block;
+  }
+
+  .vacancy .right {
+    -webkit-box-ordinal-group: 0;
+    -webkit-order: -1;
+        -ms-flex-order: -1;
+            order: -1;
+  }
+
+  .vacancy .left, .vacancy .right {
+    padding: 0 15px;
+  }
+
+  .vacancy .social {
+    display: none !important;
+  }
+
+  .vacancy .socialButtons {
+    display: none !important;
+  }
+
+  .vacancy .hrUser .photo {
+    text-align: left;
+    padding: 10px;
+  }
+
+  .vacancy .share {
+    border: none;
+    padding: 0;
+    height: auto;
+  }
+
+
+  /* YOUNG */
+  #s4-titlerow-custom {
+    padding: 15px 15px 25px 15px !important;
+  }
+  .article-content,
+  .article-content * {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  .article-content {
+    padding: 0 15px;
+  }
+  .article-content img {
+    display: block;
+    float: none;    
+    margin: 0 auto 25px !important;
+    max-width: 100%;
+    width: 100%;
+  }
+      
+  .vacancy-header .young_icon, .vacancy-header .hotVacancy_icon {
+    padding-left: 10px;
+    padding-top: 0px;
+  }
+  .vacancy-header .young, 
+  .vacancy-header .hotVacancy {
+      display: none;
+  }
+  
+  .suggestions {
+  width: -webkit-calc(100% - 34px);
+  width: calc(100% - 34px);
+  }
+  .suggestions__item {
+    width: 100%;
+  }
+}

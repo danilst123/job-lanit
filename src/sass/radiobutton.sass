@@ -1,0 +1,45 @@
+.radiobutton
+  max-width: 100% //ie fix
+  display: inline-flex
+  align-items: center
+
+  & &__input
+    display: none
+
+  & &__icon
+    width: 20px
+    height: 20px
+    border: 2px solid #d8d8d8
+    background-color: #f7f7f7
+    border-radius: 50%
+    position: relative
+    transition: border-color 0.15s
+    flex-shrink: 0
+    cursor: pointer
+
+    &:after
+      content: ''
+      display: block
+      width: 10px
+      height: 10px
+      border-radius: 50%
+      background: transparent
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      transition: background 0.15s
+
+  & &__input:checked + &__icon
+    border-color: #10a9ea
+
+    &:after
+      background: #10a9ea
+
+  & &__title
+    font-family: $main_font
+    color: #5a5c63
+    font-size: 14px
+    font-weight: 400
+    line-height: 20px
+    margin-left: 9px

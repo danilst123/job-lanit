@@ -1,0 +1,63 @@
+.checkbox
+  max-width: 100% //ie fix
+  display: inline-flex
+  align-items: center
+
+  & &__input
+    display: none
+
+  & &__icon
+    width: 18px
+    height: 18px
+    border: 2px solid #d8d8d8
+    border-radius: 3px
+    background-color: #f7f7f7
+    position: relative
+    z-index: 1
+    transition: background-color 0.2s, border-color 0.2s
+    cursor: pointer
+    flex-shrink: 0
+    cursor: pointer
+    margin-right: 9px
+
+    &:after
+      content: ''
+      display: block
+      height: 100%
+      width: 100%
+      flex-shrink: 0
+      position: absolute
+      z-index: 1
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%) scale(0) rotate(-45deg)
+      transition: transform 0.2s
+      background-image: url('../img/check.svg')
+      background-repeat: no-repeat
+      background-position: center
+      background-size: 18px auto
+
+  & &__title
+    color: #424242
+    font-family: $main_font
+    font-size: 14px
+    font-weight: 400
+    line-height: 20px
+
+    a
+      color: #10a9ea
+      text-decoration: underline
+
+      &:hover
+        text-decoration: none
+
+  & &__input:checked + &__icon
+    background-color: #10a9ea
+    border-color: #10a9ea
+
+    &:after
+      transform: translate(-50%, -50%) scale(1) rotate(0deg)
+
+  & &__input:disabled + &__icon
+    opacity: 0.4
+    cursor: default

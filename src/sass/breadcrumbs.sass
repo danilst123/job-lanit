@@ -1,0 +1,31 @@
+.breadcrumbs
+  display: flex
+  flex-wrap: wrap
+  align-items: center
+  margin: -2px -5px
+  margin-bottom: 30px
+  @media screen and (max-width: $xs-max)
+    margin-bottom: 20px
+
+  &__item
+    display: inline-flex
+    align-items: center
+    font-family: $main_font
+    font-size: 15px
+    line-height: 22px    
+    color: #9f9f9f !important
+    text-decoration: none !important
+    margin: 2px 5px
+
+    &:not(:last-child)
+      &::after
+        content: '/'
+        margin-left: 10px
+
+    &:last-child
+      color: #424242 !important
+      pointer-events: none
+
+    &:hover
+      span
+        text-decoration: underline

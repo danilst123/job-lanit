@@ -1,0 +1,58 @@
+.form-grid
+  display: flex
+  justify-content: space-between
+  flex-wrap: wrap
+  align-items: flex-end
+
+  @media screen and (max-width: 459px)
+    flex-direction: column
+    align-items: stretch
+    justify-content: flex-start
+
+  &:last-child
+    margin-bottom: -12px
+
+  .fieldset
+    width: calc(50% - 5px)
+
+    @media screen and (max-width: 459px)
+      width: 100%
+
+    &:last-child
+      margin-bottom: 12px
+
+  &--vacancySearch,
+  &--vacancySearchSubmit
+    @media screen and (max-width: $sm-max)
+      flex-direction: column
+      justify-content: flex-start
+
+  &--vacancySearch
+    align-items: flex-start
+    margin-top: 20px
+    @media screen and (max-width: $sm-max)
+      align-items: stretch
+    .fieldset
+      width: calc(25% - 5px)
+      @media screen and (max-width: $sm-max)
+        width: 100%
+      &:first-child
+        width: calc(50% - 5px)
+        @media screen and (max-width: $sm-max)
+          width: 100%
+
+  &--vacancySearchSubmit
+    align-items: center
+    margin-top: 8px
+    @media screen and (max-width: $sm-max)
+      align-items: stretch
+    &:last-child
+      margin-bottom: 0
+    .form__control
+      @media screen and (max-width: $sm-max)
+        justify-content: center
+      &:not(:only-child)
+        margin-top: -10px
+        @media screen and (max-width: $sm-max)
+          margin-top: 20px
+      

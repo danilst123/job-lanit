@@ -1,0 +1,47 @@
+.progress-list
+  margin: 0
+  padding: 0
+  list-style: none
+  position: relative
+
+  &__item
+    position: relative
+    padding-left: 30px
+    padding-bottom: 5px
+    &:before
+      content: ''
+      display: inline-block
+      height: 100%
+      width: 1px
+      border-left: 1px dotted #10a9ea
+      position: absolute
+      left: 7px
+      transform: translateX(-50%)
+      top: 0
+
+    &:first-child:before
+      top: 8px
+      height: calc(100% - 8px)
+
+    &:last-child:before
+      height: 7px
+
+  &__bullit
+    display: inline-block
+    width: 22px
+    height: 22px
+    border-radius: 50%
+    background: rgba(16, 169, 234, 0.14)
+    position: absolute
+    top: 0
+    left: -4px
+    &:before
+      content: ''
+      display: inline-block
+      width: 8px
+      height: 8px
+      background-color: #10a9ea
+      border-radius: 50%
+      position: absolute
+      top: 7px
+      left: 7px

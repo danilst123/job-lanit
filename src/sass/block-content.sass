@@ -1,0 +1,305 @@
+.block-content
+  width: 100%
+  position: relative
+  font-family: $main_font
+  font-size: 15px
+  font-weight: 300
+  line-height: 22px
+  color: #424242
+
+  &__text
+    height: 100%
+    width: 100%
+
+    & > * + *
+      margin-top: 20px !important 
+
+    h3
+      font-size: 18px
+      font-weight: bold
+      line-height: 24px
+      color: #ff7415
+      text-transform: uppercase
+      margin-bottom: 15px
+      em
+        display: block
+        color: #424242
+        font-style: inherit
+
+    p
+      margin: 0
+      br
+        @media screen and (max-width: $md-max)
+          display: none
+      & + p
+        margin-top: 10px !important  
+
+  &__inner 
+    position: relative
+    height: 100%
+    overflow: hidden
+    &:after
+      content: ''
+      display: block
+      height: 50px
+      width: 100%
+      position: absolute
+      z-index: 5
+      bottom: 0
+      left: 0
+
+  &--short
+    width: 330px
+    @media screen and (max-width: $md-max) and (min-width: $md-min)
+      width: calc(100% - 150px)
+    @media screen and (max-width: $sm-max)
+      width: 100%
+
+  &--halfwide
+    width: 50%
+    @media screen and (max-width: $sm-max)
+      display: block
+      width: 100%
+  
+  &--self-center
+    align-self: center
+
+  &--biggerFont
+    p
+      font-size: 17px
+      line-height: 24px
+  
+  &--grey
+    margin: 0
+    .block-content
+      &__text
+        padding: 25px 30px
+        background-color: #f7f7f7
+        @media screen and (max-width: $sm-max)
+          padding: 30px 20px
+
+  &--grey + &--grey
+    .block-content
+      &__text
+        padding-left: 10px
+        @media screen and (max-width: $sm-max)
+          padding-left: 20px
+          padding-top: 0  
+
+  &--sign
+    display: flex
+    @media screen and (max-width: $sm-max)
+      justify-content: flex-end
+    @media screen and (max-width: $xxs-max)
+      flex-direction: column
+      justify-content: center
+      align-items: center
+    @media screen and (min-width: $xxs-max)
+      min-height: 105px
+    .block-content
+      &__text
+        position: relative
+        @media screen and (max-width: $sm-max)
+          width: calc(100% - 120px)
+        @media screen and (max-width: $xxs-max)
+          width: 100%
+          margin-bottom: 30px
+        &:before
+          content: ''
+          display: inline-block
+          position: absolute
+          left: -20px
+          top: 50%
+          transform: translateY(-50%)
+          width: 0
+          height: 0
+          border-style: solid
+          border-width: 10px 20px 10px 0
+          border-color: transparent #f7f7f7 transparent transparent
+          @media screen and (max-width: $xxs-max)
+            left: 50%
+            top: 100%
+            transform: translateX(-50%) translateY(-2px) rotateZ(-90deg)
+      &__img
+        display: inline-block
+        width: 88px
+        height: 105px
+        background-repeat: no-repeat
+        position: absolute
+        z-index: 5
+        left: -120px
+        top: 50%
+        transform: translateY(-50%)  
+        @media screen and (max-width: $sm-max)
+          left: 0
+        @media screen and (max-width: $xxs-max)
+          order: 2
+          position: static
+          transform: translateY(0)  
+        
+  &--welcome
+    @media screen and (max-width: $xs-max)
+      margin-top: 20px
+    .block-content
+      &__text
+        padding: 40px 105px 40px 25px
+        @media screen and (max-width: $sm-max)
+          padding-top: 50px
+          padding-right: 80px
+        @media screen and (max-width: $xs-max)
+          padding: 60px 20px 25px
+      &__img
+        display: inline-block
+        width: 206px
+        height: 90px
+        position: absolute
+        z-index: 5
+        top: -35px
+        right: 20px
+    
+  &--teacher
+    min-height: 170px
+    .block-content
+      &__text
+        min-height: 170px
+        padding: 40px 145px 40px 30px
+        @media screen and (max-width: $sm-max)
+          padding: 25px 20px 25px 160px
+        @media screen and (max-width: $xxs-max)
+          padding: 25px 20px 170px
+      &__img
+        position: absolute
+        height: 149px
+        width: 140px
+        position: absolute
+        z-index: 5
+        bottom: 0
+        right: 0
+        @media screen and (max-width: $sm-max)
+          transform: rotateY(-180deg)
+          right: calc(100% - 140px)
+    
+  &--help
+    min-height: 320px
+    .block-content
+      &__text
+        min-height: 320px
+        padding: 55px 260px 55px 50px
+        @media screen and (max-width: $xs-max)
+          padding: 25px 20px 370px
+      &__img
+        display: inline-block
+        width: 243px
+        height: 327px
+        background-image: url("../img/meditation.png")
+        background-repeat: no-repeat
+        position: absolute
+        z-index: 5
+        bottom: 35px
+        right: 25px
+        @media screen and (max-width: $md-max) and (min-width: $sm-min)
+          right: 5px
+        @media screen and (max-width: $xs-max)
+          bottom: 25px
+          right: 50%
+          transform: translate(50%)
+    
+  &--pictured
+    overflow: hidden
+    .block-content
+      &__text
+        min-height: 378px
+        overflow: hidden
+        padding: 50px
+        color: #ffffff
+        position: relative
+        z-index: 2
+        @media screen and (max-width: $md-max) and (min-width: $md-min)
+          padding: 30px
+        @media screen and (max-width: $sm-max) and (min-width: $sm-min)
+          padding: 30px
+        @media screen and (max-width: $xs-max)
+          padding: 25px
+        @media screen and (max-width: $xxs-max)
+          padding: 20px
+
+        h3
+          color: #fff !important
+          @media screen and (max-width: $xxs-max)
+            font-size: 16px
+            line-height: 1.4
+        br
+      &__img
+        height: 100%
+        width: 100%
+        position: absolute
+        z-index: 1
+        top: 0
+        left: 0
+        background-repeat: no-repeat
+        background-size: cover
+        background-position: center right
+
+  &--success
+    .block-content
+      &__text
+        padding-right: 195px
+        @media screen and (max-width: $md-max) and (min-width: $md-min)
+          padding-right: 135px
+        @media screen and (max-width: $sm-max) and (min-width: $sm-min)
+          padding-right: 280px
+        @media screen and (max-width: $xs-max) and (min-width: 601px)
+          padding-right: 280px
+        @media screen and (max-width: 600px) and (min-width: 501px)
+          padding-right: 150px
+        @media screen and (max-width: 500px) and (min-width: 415px)
+          padding-right: 120px
+        @media screen and (max-width: $xxs-max) 
+          padding-right: 100px
+      &__img
+        @media screen and (max-width: $md-max) and (min-width: $md-min)
+          background-image: url("../img/success-mob.svg") !important
+        @media screen and (max-width: $sm-max) and (min-width: $sm-min)
+          background-image: url("../img/success.svg") !important
+          background-position: top right
+        @media screen and (max-width: $xs-max) 
+          background-image: url("../img/success.svg") !important
+          background-position: top right
+        @media screen and (max-width: 600px)
+          background-image: url("../img/success-mob.svg") !important
+          background-position: center right
+
+  &--skip
+    .block-content
+      &__text
+        padding-right: 200px
+        @media screen and (max-width: $md-max) and (min-width: $md-min)
+          padding-right: 225px
+        @media screen and (max-width: 1040px) and (min-width: $md-min)
+          padding-right: 185px
+        @media screen and (max-width: $sm-max) and (min-width: $sm-min)
+          padding-right: 380px
+        @media screen and (max-width: $xs-max) and (min-width: 701px)
+          padding-right: 290px
+        @media screen and (max-width: 700px) and (min-width: 601px)
+          padding-right: 250px
+        @media screen and (max-width: 600px) and (min-width: 515px)
+          padding-right: 180px
+        @media screen and (max-width: 514px) and (min-width: 461px)
+          padding-right: 200px
+        @media screen and (max-width: 460px) and (min-width: 421px)
+          padding-right: 190px
+        @media screen and (max-width: 420px) and (min-width: 381px)
+          padding-right: 170px
+        @media screen and (max-width: 380px)
+          padding-right: 38%
+      &__img
+        background-position: top right
+        @media screen and (max-width: $md-max) and (min-width: $md-min)
+          background-image: url("../img/skip.svg") !important
+        @media screen and (max-width: $sm-max) and (min-width: $sm-min)
+          background-image: url("../img/skip.svg") !important
+        @media screen and (max-width: $xs-max) 
+          background-image: url("../img/skip.svg") !important
+        @media screen and (max-width: 500px) 
+          background-image: url("../img/skip-mob.svg") !important

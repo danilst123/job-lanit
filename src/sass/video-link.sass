@@ -1,0 +1,44 @@
+.video-link
+  text-decoration: none
+  display: block
+  height: 100%
+  width: 100%
+  position: relative
+  position: absolute
+  z-index: 5
+  top: 0
+  left: 0
+
+  & &__bg
+    content: ''
+    height: 100%
+    width: 100%
+    position: absolute
+    z-index: 15
+    top: 0
+    left: 0
+    background: rgba(0, 0, 0, 0.3)
+    opacity: 0
+    transition: opacity 0.3s
+
+  & &__play
+    content: ''
+    width: 66px
+    height: 66px
+    background-image: url('../img/play.svg')
+    background-repeat: no-repeat
+    background-position: center
+    background-size: contain
+    position: absolute
+    z-index: 20
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    cursor: pointer
+    transition: all 0.3s
+
+  &:hover &__bg 
+    opacity: 1
+    
+  &:hover &__play
+    opacity: 0.8

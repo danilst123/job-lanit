@@ -1,0 +1,83 @@
+.fieldset
+  display: block
+  position: relative
+  margin: 0
+  padding: 0
+  border: none
+
+  &:not(:last-child)
+    margin-bottom: 12px
+  
+  & &__title
+    width: 100%
+    display: block
+    color: #a9a9a9
+    font-family: $main_font
+    font-size: 15px
+    font-weight: 400
+    line-height: 20px
+    padding: 0
+    white-space: normal
+    margin-bottom: 2px
+
+  & &__hint
+    color: #a9a9a9
+    font-family: $main_font
+    font-size: 15px
+    font-weight: 400
+    line-height: 20px
+    margin: 0
+
+  & &__error
+    color: #e82f2f
+    font-family: $main_font
+    font-size: 13px
+    font-weight: 400
+    line-height: 20px
+    text-align: right
+    margin: 0
+    position: absolute
+    z-index: 5
+    top: calc(100% - 2px)
+    right: 0
+
+    &--static
+      position: static
+      text-align: left
+      margin-top: 5px
+
+  &--withHint
+    .form-field:not(.form-field--textarea),
+    .form-field:not(.form-field--textarea) + .fieldset__hint
+      display: inline-block
+      vertical-align: middle
+
+      @media screen and (max-width: $xxs-max)
+        display: block
+
+    .form-field:not(.form-field--textarea)
+      width: 110px
+
+      @media screen and (max-width: $xxs-max)
+        width: 100%
+
+    .form-field:not(.form-field--textarea) + .fieldset__hint
+      max-width: calc(100% - 115px)
+      padding-left: 12px
+
+      @media screen and (max-width: $xxs-max)
+        max-width: 100%
+        padding: 0
+        margin-top: 10px
+
+    .form-field--textarea + .fieldset__hint
+      margin-top: 15px
+
+  &--add
+    margin-top: 16px !important
+
+  &--radio
+    .radiobutton 
+      display: flex 
+      &:not(:last-child)
+        margin-bottom: 12px

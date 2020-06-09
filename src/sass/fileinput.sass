@@ -1,0 +1,77 @@
+.fileinput
+  display: flex
+  align-items: center
+  flex-wrap: wrap
+  margin: -5px -10px
+
+  & &__wrapper
+    flex-shrink: 0
+    margin: 5px 10px
+
+  & &__content
+    display: flex
+    align-items: center
+
+  & &__input
+    display: none !important
+
+  & &__btn
+    height: 42px
+    min-width: 42px !important
+    display: inline-flex
+    justify-content: center
+    align-items: center
+    color: #ffffff !important
+    font-family: $main_font !important
+    font-size: 16px !important
+    font-weight: 400 !important
+    line-height: 1
+    text-transform: uppercase
+    text-decoration: none
+    transition: background-color 0.3s, color 0.3s
+    cursor: pointer
+    border: none !important
+    background-color: #10a9ea !important
+    padding: 0 24px !important
+
+    &:hover
+      background-color: #30c1ff !important
+      text-decoration: none
+
+    @media screen and (max-width: $xxs-max)
+      padding: 0 18px !important
+      height: 40px
+
+    svg, img
+      &:first-child
+        margin-right: 11px
+      &:last-child
+        margin-left: 11px
+
+  & &__files
+    font-family: $main_font
+    font-size: 16px
+    line-height: 1.2
+    font-weight: 400
+    display: none
+    margin: 5px 10px
+
+  & &__error
+    display: none
+    font-size: 14px
+    background-size: auto
+    background-position: left top
+    padding-left: 25px
+    margin: 5px 10px
+
+  & &__remove
+    display: none
+    height: 18px
+    width: 18px
+    flex-shrink: 0
+    background-image: url('../img/small-close.svg')
+    background-repeat: no-repeat
+    background-position: center
+    opacity: 1
+    cursor: pointer
+    margin: 5px 10px 5px -5px

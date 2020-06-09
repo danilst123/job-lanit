@@ -1,0 +1,40 @@
+.chunks
+  display: flex
+  align-items: center
+  flex-wrap: wrap
+  color: #10a9ea
+  font-family: $main_font
+  font-size: 15px
+  font-weight: 400
+  line-height: 20px
+  margin: -2px
+  &__item
+    display: inline-flex
+    align-items: center
+    justify-content: center
+    text-align: center
+    //visibility: hidden
+    height: 30px
+    border-radius: 15px
+    border: 2px solid #10a9ea
+    background-color: #ffffff
+    color: inherit !important  
+    text-decoration: none !important  
+    font-family: inherit
+    font-size: inherit
+    font-weight: inherit
+    line-height: inherit
+    transition: color 0.15s, background-color 0.15s
+    padding: 0 13px
+    margin: 2px
+    &:hover
+      color: #fff !important  
+      background-color: #10a9ea  
+  &__more
+    border-bottom: 2px dotted #10a9ea
+    line-height: 1
+    margin: 5px 2px 5px 14px
+    transition: border-bottom-color 0.15s
+    cursor: pointer
+    &:hover
+      border-bottom-color: transparent

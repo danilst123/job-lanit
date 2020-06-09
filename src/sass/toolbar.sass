@@ -1,0 +1,33 @@
+.toolbar
+  background-color: #f7f7f7
+  margin-bottom: 40px
+
+  @media screen and (max-width: $md-max)
+    margin-bottom: 25px
+
+  .container
+    height: 90px
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+
+    @media screen and (max-width: $md-max)
+      height: auto
+      display: block
+      padding-top: 15px
+      padding-bottom: 15px
+
+  .operate-btn
+    width: 690px
+    flex-shrink: 0
+
+    @media screen and (max-width: $md-max)
+      width: auto
+
+  .search
+    width: calc(100% - 690px)
+    margin-left: 10px
+
+    @media screen and (max-width: $md-max)
+      width: 100%
+      margin: 15px 0 0

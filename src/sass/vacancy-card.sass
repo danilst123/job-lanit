@@ -1,0 +1,236 @@
+.vacancy-card
+  height: 100%
+  display: flex
+  flex-direction: column
+  align-items: center
+  position: relative
+  overflow: hidden
+  background-color: #f7f7f7
+  padding: 30px
+  padding-bottom: 120px
+  @media screen and (max-width: $xs-max)
+    padding: 20px
+    padding-bottom: 70px
+
+  & &__label
+    width: 58px
+    height: 58px
+    position: absolute
+    z-index: 5
+    top: 0
+    right: 0
+    background-repeat: no-repeat
+    background-position: center
+    @media screen and (max-width: $xs-max)
+      height: 45px
+      width: 45px
+
+  &--trainee &__label
+    background-color: #10a9ea
+    background-image: url('../img/hat.svg')
+    background-size: 75% auto
+
+  &--hot &__label
+    background-image: url('../img/fire.svg')
+    background-color: #ff7415
+    background-size: auto 75%
+
+  & &__text
+    height: 440px
+    width: 100%
+    overflow: hidden
+    position: relative
+    padding-bottom: 30px
+    @media screen and (max-width: $md-max)
+      height: 340px
+    @media screen and (max-width: $xs-max)
+      height: 240px
+    &:after
+      content: ''
+      display: block
+      height: 30px
+      width: 100%
+      position: absolute
+      z-index: 5
+      bottom: 0
+      left: 0
+      background-image: url('../img/shadow.png')
+      background-repeat: repeat-x
+      background-position: bottom left
+
+  & &__head
+    min-height: 48px
+    width: 100%
+    color: #424242
+    font-family: $main_font
+    font-size: 22px
+    font-weight: 700
+    line-height: 24px
+    text-transform: uppercase
+    padding-right: 35px
+    margin: 0
+    margin-bottom: 25px
+    transition: color 0.3s
+    &:hover
+      color: #10a9ea
+    @media screen and (max-width: $sm-max)
+      min-height: auto
+    @media screen and (max-width: $xs-max)
+      font-size: 18px
+      line-height: 22px
+      margin-bottom: 15px
+    a
+      color: inherit
+      text-decoration: none !important
+   
+  & &__box
+    width: 100%
+    color: #424242
+    font-family: $main_font
+    font-size: 14px
+    font-weight: 400
+    line-height: 18px
+    margin-top: 20px
+    @media screen and (max-width: $xs-max)
+      font-size: 12px
+      line-height: 16px
+      margin-top: 15px
+    &:first-child
+      margin-top: 0
+    &:nth-of-type(3)
+      @media screen and (max-width: $xs-max)
+        display: none
+    h4
+      color: #b3b3b3
+      font-family: $main_font
+      font-size: 13px
+      font-weight: 500
+      line-height: 20px
+      text-transform: uppercase
+      margin: 0
+      margin-bottom: 5px
+      @media screen and (max-width: $xs-max)
+        font-size: 12px
+        line-height: 16px
+    p
+      margin: 0
+    ul
+      padding: 0
+      margin: 0
+      list-style-type: none
+      li
+        min-height: 20px
+        position: relative
+        padding-left: 30px
+        @media screen and (max-width: $xs-max)
+          min-height: 15px
+        & + li
+          margin-top: 10px
+          @media screen and (max-width: $xs-max)
+            margin-top: 5px
+        &:before
+          content: '—'
+          position: absolute
+          top: 0
+          left: 0
+
+  & &__btn
+    width: 200px
+    position: absolute
+    left: 50%
+    bottom: 40px
+    transform: translateX(-50%)
+    @media screen and (max-width: $xs-max)
+      bottom: 20px
+
+  &--searchResult, &--vacancyPage
+    padding: 35px
+    padding-bottom: 5px
+    @media screen and (max-width: $sm-max)
+      padding-left: 25px
+      padding-right: 25px
+    @media screen and (max-width: $xs-max)
+      padding: 25px 20px 5px  
+    .vacancy-card
+      &__label + .vacancy-card__label
+        right: 58px
+        @media screen and (max-width: $xs-max)
+          right: 45px
+      &__text
+        height: 245px
+        @media screen and (max-width: $xs-max)
+          height: 250px
+      &__head
+        min-height: auto
+        margin-bottom: 20px
+        padding-right: 90px
+        @media screen and (max-width: $xs-max)
+          padding-right: 70px
+          margin-bottom: 15px
+      &__body
+        display: flex
+        @media screen and (max-width: $xs-max)
+          flex-direction: column
+      &__box
+        margin: 0
+        line-height: 16px
+        &:nth-child(1):not(:only-child)
+          width: calc(100% - 200px)
+          padding-right: 20px
+          @media screen and (max-width: $sm-max)
+            width: calc(100% - 150px)
+          @media screen and (max-width: $xs-max)
+            width: 100%
+            padding: 0
+        &:nth-child(2)
+          width: 200px
+          text-align: right
+          @media screen and (max-width: $sm-max)
+            width: 150px
+          @media screen and (max-width: $xs-max)
+            width: 100%
+            order: -1
+            text-align: left
+            margin-bottom: 15px
+        h4
+          margin-bottom: 8px
+        ul
+          li + li
+            margin-top: 5px
+  
+  &--searchResult.vacancy-card--hot.vacancy-card--trainee
+    .vacancy-card__label + .vacancy-card__label
+      background-color: #10a9ea
+      background-image: url('../img/hat.svg')
+      background-size: 80% auto
+
+  &--vacancyPage
+    padding: 30px
+    .vacancy-card
+      &__text
+        height: auto
+        padding: 0
+        &:after
+          display: none
+      &__box
+        font-size: 15px
+        line-height: 22px
+        padding-right: 120px
+        @media screen and (max-width: $xs-max)
+          padding: 0
+      &__head
+        font-size: 18px
+        line-height: 24px
+        margin-bottom: 15px
+
+  &--vacancyPage.vacancy-card--hot
+    &.vacancy-card--trainee
+      .vacancy-card__label + .vacancy-card__label
+        background-color: #10a9ea
+        background-image: url('../img/hat.svg')
+        background-size: 70% auto
+    .vacancy-card__label
+      background-size: auto 70%
+    .vacancy-card__head
+      &:hover
+        color: #424242

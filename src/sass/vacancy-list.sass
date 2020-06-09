@@ -1,0 +1,43 @@
+.vacancy-list
+  padding: 0
+  margin: 0
+  list-style-type: none
+
+  &--top-offseted
+    margin-top: 20px
+
+  & &__item
+    display: flex
+    align-items: flex-start
+    color: #ffffff
+    font-family: $main_font
+    font-size: 15px
+    font-weight: 300
+    line-height: 22px
+
+    &:hover p
+      color: #eee
+
+    img
+      flex-shrink: 0
+      display: block
+      border: none
+      max-width: 100px
+      max-height: 100px
+      height: auto
+      width: auto
+      margin-right: 15px
+
+    a
+      color: inherit
+      text-decoration: none
+
+    span
+      opacity: 0.45
+
+    br
+      @media screen and (max-width: $sm-max)
+        display: none
+
+  & &__item + &__item
+    margin-top: 20px

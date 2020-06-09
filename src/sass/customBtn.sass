@@ -1,0 +1,143 @@
+.customBtn
+  height: 48px
+  min-width: 48px !important
+  display: inline-flex
+  justify-content: center
+  align-items: center
+  color: #ffffff !important
+  font-family: $main_font !important
+  font-size: 14px !important
+  font-weight: 500 !important
+  line-height: 1.2
+  text-transform: uppercase
+  text-decoration: none
+  transition: background-color 0.3s, color 0.3s
+  cursor: pointer
+  border: none !important
+  background-color: #10a9ea !important
+  padding: 0 12px !important
+  margin: 0
+  border-radius: 0
+  appearance: none
+
+  @media screen and (max-width: $xs-max)
+    height: 40px
+
+  &:hover, &:active, &:focus
+    background-color: #30c1ff !important
+    text-decoration: none
+    outline: none
+
+  &--orange
+    background-color: #ff7415 !important
+
+    &:hover, &:active, &:focus
+      background-color: #ff8f43 !important
+
+  &--dark-blue
+    background-color: #096594 !important
+
+    &:hover, &:active, &:focus
+      background-color: #1783b9 !important
+
+  &--search
+    width: 50px
+    background-image: url('../img/search.svg')
+    background-repeat: no-repeat
+    background-position: center
+
+    @media screen and (max-width: $xs-max)
+      height: 48px
+
+  &--white-bordered
+    height: 40px
+    border: 2px solid #ffffff !important
+    background: transparent !important
+    transition: border-color 0.3s, color 0.3s
+    padding: 0 22px !important
+
+    &:hover, &:active, &:focus
+      background: transparent !important
+      border-color: rgba(255, 255, 255, 0.8) !important
+      color: rgba(255, 255, 255, 0.8) !important
+
+  &--blue-bordered
+    height: 40px
+    border: 2px solid #009ede !important
+    background: transparent !important
+    color: #009ede !important
+    transition: border-color 0.3s, color 0.3s
+    padding: 0 22px !important
+
+    &:hover, &:active, &:focus
+      background: transparent !important
+      border-color: rgba(0, 158, 222, 0.8) !important
+      color: rgba(0, 158, 222, 0.8) !important
+
+  &--link
+    &:hover, &:active, &:focus
+      svg, img
+        animation-name: link-arrow-shift
+        animation-duration: 0.8s
+        animation-timing-function: ease-in-out
+        animation-iteration-count: infinite
+        animation-fill-mode: backwards
+  
+  &--light
+    height: 42px
+    font-size: 16px !important
+    font-weight: 400 !important
+
+  &--file
+    padding: 0 18px !important
+    svg, img
+      &:first-child
+        margin-right: 14px
+      &:last-child
+        margin-left: 14px
+
+  &--add
+    padding: 0 20px !important
+
+    @media screen and (max-width: $xxs-max)
+      padding: 0 18px !important
+
+    svg, img
+      &:first-child
+        margin-right: 9px
+      &:last-child
+        margin-left: 9px
+
+  &--download
+    padding: 0 24px !important
+
+    @media screen and (max-width: $xxs-max)
+      padding: 0 18px !important
+
+    svg, img
+      &:first-child
+        margin-right: 11px
+      &:last-child
+        margin-left: 11px
+
+  &--submit
+    font-size: 15px !important
+    padding: 0 22px !important
+
+    @media screen and (max-width: $xxs-max)
+      font-size: 14px !important
+      padding: 0 18px !important
+
+  &--vacancySearch
+    padding: 0 32px !important
+
+  &--contactCard
+    height: 48px
+
+  svg, img
+    flex-shrink: 0
+    &:first-child
+      margin-right: 10px
+    &:last-child
+      margin-left: 10px
+

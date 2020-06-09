@@ -1,0 +1,42 @@
+.slide-toggle
+  margin: -5px 0
+
+  &:not(:last-of-type)
+    margin-bottom: 5px
+
+  &:last-of-type
+    .slide-toggle__body
+      padding-bottom: 0
+
+  & &__head
+    position: relative
+    cursor: pointer
+    padding: 5px 0
+    margin: 0
+    perspective: 900000px // safari rotate bug fix
+
+    @media screen and (max-width: 459px)
+      padding-left: 25px
+
+    &:before
+      content: ''
+      display: block
+      width: 15px
+      height: 18px
+      background-image: url('../img/arrow-up.svg')
+      background-repeat: no-repeat
+      background-position: center
+      position: absolute
+      top: 50%
+      transform: translateY(-50%)
+      left: -30px
+      transition: transform 0.3s
+
+      @media screen and (max-width: 459px)
+        left: 0
+
+    &--active:before
+      transform: rotateX(180deg) translateY(50%)
+
+  & &__body
+    padding: 5px 0 25px

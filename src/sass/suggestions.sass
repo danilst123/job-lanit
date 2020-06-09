@@ -1,0 +1,27 @@
+.suggestions
+  display: none
+  width: 100%
+  background-color: #fff
+  position: absolute
+  z-index: 10
+  top: 100%
+  left: 0
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1)
+
+  & &__item
+    position: relative
+    padding: 15px
+    cursor: pointer
+    font-family: $main_font
+    color: #000
+    font-weight: 400
+    font-size: 16px
+    line-height: 20px
+
+    &.active
+      background-color: #10a9ea
+      color: #fff
+
+    strong
+      font-weight: 700
+

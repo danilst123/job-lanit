@@ -1,0 +1,29 @@
+.operate-btn
+  display: flex
+  margin: -5px
+  @media screen and (max-width: $xs-max)
+    display: block
+    margin: -5px 0
+
+  & &__btn
+    width: calc(33.33%)
+    margin: 5px
+    @media screen and (max-width: $xs-max)
+      width: 100%
+      margin: 5px 0
+
+  &--inTitle
+    flex-wrap: wrap
+    @media screen and (max-width: $xs-max)
+      display: flex
+      margin: -5px
+    .operate-btn__btn
+      width: auto
+      height: 48px
+      @media screen and (max-width: $xs-max)
+        margin: 5px
+
+  &--vacancySearch
+    .operate-btn__btn:first-child
+      @media screen and (max-width: $xs-max)
+        display: none

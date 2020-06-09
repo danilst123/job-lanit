@@ -1,0 +1,14 @@
+.radiobutton-list
+  margin: 0
+  padding: 0
+  list-style: none
+  display: flex
+  flex-wrap: wrap
+  align-items: center
+  @media screen and (max-width: $xs-max)
+    display: block
+  &__item
+    &:not(:first-child)
+      margin-left: 20px
+      @media screen and (max-width: $xs-max)
+        margin: 10px 0 0
